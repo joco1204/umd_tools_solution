@@ -1,3 +1,1 @@
-$(function(){
-    console.log('inicio de js')
-})
+new DataTable('#example');
