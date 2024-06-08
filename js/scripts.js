@@ -1,3 +1,2 @@
-$(function(){
-    console.log('inicio de js')
-})
+"use strict"
+
