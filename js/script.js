@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     icon: 'success',
                     title: '¡Éxito!',
                     text: 'La información se guardó correctamente. Pronto nos estaremos comunicando.',
-                    timer: 3000,
+                    timer: 7000,
                     timerProgressBar: true,
                     showConfirmButton: false
                 }).then(function() {
