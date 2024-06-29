@@ -62,19 +62,22 @@
                                         <div class="row mb-3">
                                             <div class="col-md-12">
                                                 <label for="nombres" class="form-label">Nombres</label>
-                                                <input type="text" class="form-control" id="nombres" name="nombres" required>
+                                                <input type="text" class="form-control" id="nombres" name="nombres">
+                                                <span id="errorNombres" class="invalid-feedback">Este campo es requerido y no debe contener signos de puntuación ni caracteres especiales.</span>
                                             </div>
                                         </div>
                                         <div class="row mb-3">
                                             <div class="col-md-12">
                                                 <label for="apellidos" class="form-label">Apellidos</label>
-                                                <input type="text" class="form-control" id="apellidos" name="apellidos" required>
+                                                <input type="text" class="form-control" id="apellidos" name="apellidos">
+                                                <span id="errorApellidos" class="invalid-feedback">Este campo es requerido y no debe contener signos de puntuación ni caracteres especiales.</span>
                                             </div>
                                         </div>
                                         <div class="row mb-3">
                                             <div class="col-md-12">
                                                 <label for="tipoIdentificacion" class="form-label">Tipo de Identificación</label>
-                                                <select class="form-select" id="tipoIdentificacion" name="tipoIdentificacion" required>
+                                                <select class="form-select" id="tipoIdentificacion" name="tipoIdentificacion">
+                                                    <option value="">Seleccione...</option>
                                                     <option value="cc">Cédula de Ciudadanía</option>
                                                     <option value="ce">Cédula de Extranjería</option>
                                                     <option value="ti">Tarjeta de Identidad</option>
@@ -82,85 +85,98 @@
                                                     <option value="pa">Pasaporte</option>
                                                     <option value="pe">Permiso Especial de Permanencia</option>
                                                 </select>
+                                                <span id="errorTipoIdentificacion" class="invalid-feedback">Este campo es requerido.</span>
                                             </div>
                                         </div>
                                         <div class="row mb-3">
                                             <div class="col-md-12">
                                                 <label for="numeroIdentificacion" class="form-label">Número de Identificación</label>
-                                                <input type="text" class="form-control" id="numeroIdentificacion" name="numeroIdentificacion" required>
+                                                <input type="text" class="form-control" id="numeroIdentificacion" name="numeroIdentificacion">
+                                                <span id="errorNumeroIdentificacion" class="invalid-feedback">Este campo es requerido y debe contener solo números, o números y letras si se selecciona Pasaporte o Permiso Especial de Permanencia.</span>
                                             </div>
                                         </div>
                                         <div class="row mb-3">
                                             <div class="col-md-12">
                                                 <label for="emailPersonal" class="form-label">Email Personal</label>
-                                                <input type="email" class="form-control" id="emailPersonal" name="emailPersonal" required>
+                                                <input type="email" class="form-control" id="emailPersonal" name="emailPersonal">
+                                                <span id="errorEmailPersonal" class="invalid-feedback">Este campo es requerido y debe ser un correo electrónico válido.</span>
                                             </div>
                                         </div>
                                         <div class="row mb-3">
                                             <div class="col-md-12">
                                                 <label for="emailInstitucional" class="form-label">Email Institucional</label>
-                                                <input type="email" class="form-control" id="emailInstitucional" name="emailInstitucional" required>
+                                                <input type="email" class="form-control" id="emailInstitucional" name="emailInstitucional">
+                                                <span id="errorEmailInstitucional" class="invalid-feedback">Este campo es requerido y debe ser un correo electrónico válido.</span>
                                             </div>
                                         </div>
                                         <div class="row mb-3">
                                             <div class="col-md-12">
                                                 <label for="celular" class="form-label">Celular</label>
-                                                <input type="tel" class="form-control" id="celular" name="celular" pattern="[0-9]{10}" required>
+                                                <input type="tel" class="form-control" id="celular" name="celular" pattern="[0-9]{10}">
+                                                <span id="errorCelular" class="invalid-feedback">Este campo es requerido y debe contener 10 dígitos numéricos.</span>
                                             </div>
                                         </div>
                                         <div class="row mb-3">
                                             <div class="col-md-12">
                                                 <label for="direccionResidencia" class="form-label">Dirección de Residencia</label>
-                                                <textarea class="form-control" id="direccionResidencia" name="direccionResidencia" rows="3" required></textarea>
+                                                <textarea class="form-control" id="direccionResidencia" name="direccionResidencia" rows="3"></textarea>
+                                                <span id="errorDireccionResidencia" class="invalid-feedback">Este campo es requerido.</span>
                                             </div>
                                         </div>
                                         <div class="row mb-3">
                                             <div class="col-md-12">
                                                 <label for="departamento" class="form-label">Departamento</label>
-                                                <select class="form-select" id="departamento" name="departamento" required>
+                                                <select class="form-select" id="departamento" name="departamento">
                                                     <option value="">Seleccione un departamento</option>
                                                 </select>
+                                                <span id="errorDepartamento" class="invalid-feedback">Este campo es requerido.</span>
                                             </div>
                                         </div>
                                         <div class="row mb-3">
                                             <div class="col-md-12">
                                                 <label for="ciudad" class="form-label">Ciudad</label>
-                                                <select class="form-select" id="ciudad" name="ciudad" required>
+                                                <select class="form-select" id="ciudad" name="ciudad">
                                                     <option value="">Seleccione una ciudad</option>
                                                 </select>
+                                                <span id="errorCiudad" class="invalid-feedback">Este campo es requerido.</span>
                                             </div>
                                         </div>
                                         <div class="row mb-3">
                                             <div class="col-md-12">
                                                 <label for="facultad" class="form-label">Facultad</label>
-                                                <input type="text" class="form-control" id="facultad" name="facultad" required>
+                                                <input type="text" class="form-control" id="facultad" name="facultad">
+                                                <span id="errorFacultad" class="invalid-feedback">Este campo es requerido y no debe contener signos de puntuación ni caracteres especiales.</span>
                                             </div>
                                         </div>
                                         <div class="row mb-3">
                                             <div class="col-md-12">
                                                 <label for="programa" class="form-label">Programa</label>
-                                                <input type="text" class="form-control" id="programa" name="programa" required>
+                                                <input type="text" class="form-control" id="programa" name="programa">
+                                                <span id="errorPrograma" class="invalid-feedback">Este campo es requerido y no debe contener signos de puntuación ni caracteres especiales.</span>
                                             </div>
                                         </div>
                                         <div class="row mb-3">
                                             <div class="col-md-12">
                                                 <label for="contrasena" class="form-label">Contraseña</label>
-                                                <input type="password" class="form-control" id="contrasena" name="contrasena" required>
+                                                <input type="password" class="form-control" id="contrasena" name="contrasena">
+                                                <span id="errorContrasena" class="invalid-feedback">Este campo es requerido y debe tener mínimo 8 caracteres, una mayúscula, una minúscula, un número y un carácter especial.</span>
                                             </div>
                                         </div>
                                         <div class="row mb-3">
                                             <div class="col-md-12">
                                                 <label for="confirmarContrasena" class="form-label">Confirmar Contraseña</label>
-                                                <input type="password" class="form-control" id="confirmarContrasena" name="confirmarContrasena" required>
+                                                <input type="password" class="form-control" id="confirmarContrasena" name="confirmarContrasena">
+                                                <span id="errorConfirmarContrasena" class="invalid-feedback">Las contraseñas no coinciden.</span>
                                             </div>
                                         </div>
                                         <div class="row mb-3">
                                             <div class="col-md-12">
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="terminos" name="terminos" required>
+                                                    <input class="form-check-input" type="checkbox" id="terminos" name="terminos">
                                                     <label class="form-check-label" for="terminos">
                                                         Acepto los <a href="#">términos y condiciones</a>
                                                     </label>
+                                                    <span id="errorTerminos" class="invalid-feedback">Debe aceptar los términos y condiciones para continuar.</span>
                                                 </div>
                                             </div>
                                         </div>
