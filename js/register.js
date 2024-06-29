@@ -128,10 +128,12 @@ document.addEventListener('DOMContentLoaded', () => {
             validateConfirmPassword('contrasena', 'confirmarContrasena', 'errorConfirmarContrasena');
         } else if (element.id === 'confirmarContrasena') {
             validateConfirmPassword('contrasena', 'confirmarContrasena', 'errorConfirmarContrasena');
+        } else if (element.id === 'direccionResidencia'){
+            validateDireccion()
         } else if (element.classList.contains('form-select')) {
             validateSelect(element.id, `error${capitalizeFirstLetter(element.id)}`);
         } else {
-            validateTextInput(element.id, /^[A-Za-záéíóúüñÁÉÍÓÚÜÑ\s]+$/, `error${capitalizeFirstLetter(element.id)}`);
+            validateTextInput(element.id, /^[a-zA-Z0-9!@#\$%\^\&*\)\(+=._-]+$/, `error${capitalizeFirstLetter(element.id)}`);
         }
 
         if (errorElement.style.display === 'none') {
@@ -150,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!validateEmail('emailPersonal', 'errorEmailPersonal')) isValid = false;
         if (!validateEmail('emailInstitucional', 'errorEmailInstitucional')) isValid = false;
         if (!validatePhoneNumber('celular', 'errorCelular')) isValid = false;
-        if (!validateTextInput('direccionResidencia', /.+/, 'errorDireccionResidencia')) isValid = false;
+        if (!validateDireccion()) isValid = false;
         if (!validateSelect('departamento', 'errorDepartamento')) isValid = false;
         if (!validateSelect('ciudad', 'errorCiudad')) isValid = false;
         if (!validateTextInput('facultad', /^[A-Za-záéíóúüñÁÉÍÓÚÜÑ\s]+$/, 'errorFacultad')) isValid = false;
@@ -168,6 +170,23 @@ document.addEventListener('DOMContentLoaded', () => {
         const value = element.value.trim();
 
         if (!value.match(pattern)) {
+            element.classList.add('is-invalid');
+            errorElement.style.display = 'block';
+            return false;
+        }
+
+        errorElement.style.display = 'none';
+        element.classList.remove('is-invalid');
+        return true;
+    }
+
+    function validateDireccion() {
+        const element = document.getElementById('direccionResidencia');
+        const errorElement = document.getElementById('errorDireccionResidencia');
+        const value = element.value;
+        const emailPattern = /^[a-zA-Z0-9\s\W]+$/;
+
+        if (!value.match(emailPattern)) {
             element.classList.add('is-invalid');
             errorElement.style.display = 'block';
             return false;
