@@ -1,4 +1,20 @@
-body, html {
+/*
+*Paleta de colores
+*----------------------------------------------------------------
+*#ffffff
+*#212529
+*#198754
+*#146c43
+*#13653f
+*#0d6efd
+*#0a58ca
+*#0a53be
+*#6c757d
+*#565e64
+*----------------------------------------------------------------
+*/
+
+html, body {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -89,6 +105,14 @@ body, html {
     line-height: 1;
     letter-spacing: -.05rem;
 }
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
   
 @media (min-width: 40em) {
     .carousel-caption p {
@@ -108,20 +132,10 @@ body, html {
     }
 }
 
-.bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-}
-
 @media (min-width: 768px) {
     .bd-placeholder-img-lg {
         font-size: 3.5rem;
-    }
-
-    
+    }   
 }
 
 @media (max-width: 768px) {

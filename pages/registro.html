@@ -39,7 +39,7 @@
                                     <a class="nav-link" href="../pages/login.html" tabindex="-1">Login</a>
                                 </li>
                             </ul>
-                            <form class="d-flex">
+                            <form class="d-flex" autocomplete="off">
                                 <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
                                 <button class="btn btn-outline-secondary" type="submit">Buscar</button>
                             </form>
@@ -53,182 +53,132 @@
                 <div class="container mt-5">
                     <div class="row justify-content-center">
                         <div class="col-lg-6">
-                            <form>
-                            <div class="card">
-                                <div class="card-header text-center">
-                                    <h3>Regístrate</h3>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row mb-3">
-                                        <div class="col-md-12">
-                                            <label for="nombres" class="form-label">Nombres</label>
-                                            <input type="text" class="form-control" id="nombres" name="nombres" required>
-                                        </div>
+                            <form id="registrationForm" autocomplete="off">
+                                <div class="card">
+                                    <div class="card-header text-center">
+                                        <h3>Regístrate</h3>
                                     </div>
-                                    <div class="row mb-3">
-                                        <div class="col-md-12">
-                                            <label for="apellidos" class="form-label">Apellidos</label>
-                                            <input type="text" class="form-control" id="apellidos" name="apellidos" required>
+                                    <div class="card-body">
+                                        <div class="row mb-3">
+                                            <div class="col-md-12">
+                                                <label for="nombres" class="form-label">Nombres</label>
+                                                <input type="text" class="form-control" id="nombres" name="nombres" required>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col-md-12">
-                                            <label for="tipoIdentificacion" class="form-label">Tipo de Identificación</label>
-                                            <select class="form-select" id="tipoIdentificacion" name="tipoIdentificacion" required>
-                                                <option value="cc">Cédula de Ciudadanía</option>
-                                                <option value="ce">Cédula de Extranjería</option>
-                                                <option value="ti">Tarjeta de Identidad</option>
-                                                <option value="rc">Registro Civil</option>
-                                                <option value="pa">Pasaporte</option>
-                                                <option value="pe">Permiso Especial de Permanencia</option>
-                                            </select>
+                                        <div class="row mb-3">
+                                            <div class="col-md-12">
+                                                <label for="apellidos" class="form-label">Apellidos</label>
+                                                <input type="text" class="form-control" id="apellidos" name="apellidos" required>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col-md-12">
-                                            <label for="numeroIdentificacion" class="form-label">Número de Identificación</label>
-                                            <input type="text" class="form-control" id="numeroIdentificacion" name="numeroIdentificacion" required>
+                                        <div class="row mb-3">
+                                            <div class="col-md-12">
+                                                <label for="tipoIdentificacion" class="form-label">Tipo de Identificación</label>
+                                                <select class="form-select" id="tipoIdentificacion" name="tipoIdentificacion" required>
+                                                    <option value="cc">Cédula de Ciudadanía</option>
+                                                    <option value="ce">Cédula de Extranjería</option>
+                                                    <option value="ti">Tarjeta de Identidad</option>
+                                                    <option value="rc">Registro Civil</option>
+                                                    <option value="pa">Pasaporte</option>
+                                                    <option value="pe">Permiso Especial de Permanencia</option>
+                                                </select>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col-md-12">
-                                            <label for="emailPersonal" class="form-label">Email Personal</label>
-                                            <input type="email" class="form-control" id="emailPersonal" name="emailPersonal" required>
+                                        <div class="row mb-3">
+                                            <div class="col-md-12">
+                                                <label for="numeroIdentificacion" class="form-label">Número de Identificación</label>
+                                                <input type="text" class="form-control" id="numeroIdentificacion" name="numeroIdentificacion" required>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col-md-12">
-                                            <label for="emailInstitucional" class="form-label">Email Institucional</label>
-                                            <input type="email" class="form-control" id="emailInstitucional" name="emailInstitucional" required>
+                                        <div class="row mb-3">
+                                            <div class="col-md-12">
+                                                <label for="emailPersonal" class="form-label">Email Personal</label>
+                                                <input type="email" class="form-control" id="emailPersonal" name="emailPersonal" required>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col-md-12">
-                                            <label for="celular" class="form-label">Celular</label>
-                                            <input type="tel" class="form-control" id="celular" name="celular" pattern="[0-9]{10}" required>
+                                        <div class="row mb-3">
+                                            <div class="col-md-12">
+                                                <label for="emailInstitucional" class="form-label">Email Institucional</label>
+                                                <input type="email" class="form-control" id="emailInstitucional" name="emailInstitucional" required>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col-md-12">
-                                            <label for="direccionResidencia" class="form-label">Dirección de Residencia</label>
-                                            <textarea class="form-control" id="direccionResidencia" name="direccionResidencia" rows="3" required></textarea>
+                                        <div class="row mb-3">
+                                            <div class="col-md-12">
+                                                <label for="celular" class="form-label">Celular</label>
+                                                <input type="tel" class="form-control" id="celular" name="celular" pattern="[0-9]{10}" required>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col-md-12">
-                                            <label for="facultad" class="form-label">Facultad</label>
-                                            <input type="text" class="form-control" id="facultad" name="facultad" required>
+                                        <div class="row mb-3">
+                                            <div class="col-md-12">
+                                                <label for="direccionResidencia" class="form-label">Dirección de Residencia</label>
+                                                <textarea class="form-control" id="direccionResidencia" name="direccionResidencia" rows="3" required></textarea>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col-md-12">
-                                            <label for="programa" class="form-label">Programa</label>
-                                            <input type="text" class="form-control" id="programa" name="programa" required>
+                                        <div class="row mb-3">
+                                            <div class="col-md-12">
+                                                <label for="departamento" class="form-label">Departamento</label>
+                                                <select class="form-select" id="departamento" name="departamento" required>
+                                                    <option value="">Seleccione un departamento</option>
+                                                </select>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col-md-12">
-                                            <label for="contrasena" class="form-label">Contraseña</label>
-                                            <input type="password" class="form-control" id="contrasena" name="contrasena" required>
+                                        <div class="row mb-3">
+                                            <div class="col-md-12">
+                                                <label for="ciudad" class="form-label">Ciudad</label>
+                                                <select class="form-select" id="ciudad" name="ciudad" required>
+                                                    <option value="">Seleccione una ciudad</option>
+                                                </select>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col-md-12">
-                                            <label for="confirmarContrasena" class="form-label">Confirmar Contraseña</label>
-                                            <input type="password" class="form-control" id="confirmarContrasena" name="confirmarContrasena" required>
+                                        <div class="row mb-3">
+                                            <div class="col-md-12">
+                                                <label for="facultad" class="form-label">Facultad</label>
+                                                <input type="text" class="form-control" id="facultad" name="facultad" required>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col-md-12">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="terminos" name="terminos" required>
-                                                <label class="form-check-label" for="terminos">
-                                                    Acepto los <a href="#">términos y condiciones</a>
-                                                </label>
+                                        <div class="row mb-3">
+                                            <div class="col-md-12">
+                                                <label for="programa" class="form-label">Programa</label>
+                                                <input type="text" class="form-control" id="programa" name="programa" required>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-12">
+                                                <label for="contrasena" class="form-label">Contraseña</label>
+                                                <input type="password" class="form-control" id="contrasena" name="contrasena" required>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-12">
+                                                <label for="confirmarContrasena" class="form-label">Confirmar Contraseña</label>
+                                                <input type="password" class="form-control" id="confirmarContrasena" name="confirmarContrasena" required>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="terminos" name="terminos" required>
+                                                    <label class="form-check-label" for="terminos">
+                                                        Acepto los <a href="#">términos y condiciones</a>
+                                                    </label>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="card-footer text-center">
+                                        <button type="submit" class="btn btn-primary">Registrarse</button>
+                                    </div>
                                 </div>
-                                <div class="card-footer text-center">
-                                    <button type="button" class="btn btn-secondary">Cancelar</button>
-                                    <button type="submit" class="btn btn-primary">Registrar</button>
-                                </div>
-                                
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
-        <hr>
-        <footer class="bg-dark">
-            <div class="footer">
-                <div class="row">
-                    <div class="col-md-6">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31811.302024405068!2d-74.1250906891602!3d4.6981334000000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9b3025b592e3%3A0x7cf13ea54e1d8b5a!2sUniversidad%20Minuto%20de%20Dios!5e0!3m2!1ses-419!2sco!4v1717883441305!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-12">
-                                    <h3 style="color: #fff;">Contactanos</h3>
-                                </div>
-                            </div>
-                            <form>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="mb-3">
-                                            <label for="nombre" class="form-label" style="color: #fff;">Nombre</label>
-                                            <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="mb-3">
-                                            <label for="email" class="form-label" style="color: #fff;">Email</label>
-                                            <input type="email" class="form-control" id="email" placeholder="Email" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="mb-3">
-                                            <label for="asunto" class="form-label" style="color: #fff;">Asunto</label>
-                                            <input type="text" class="form-control" id="asunto" placeholder="Asunto" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="mb-3">
-                                            <label for="mensaje" class="form-label" style="color: #fff;">Mensaje</label>
-                                            <textarea class="form-control" id="mensaje" placeholder="Mensaje"  required></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="mb-3">
-                                            <button type="submit" class="btn btn-success" style="color: #fff;">Enviar</button>
-                                        </div>   
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div> 
-                <div class="mb-3">
-                    <p class="float-end">
-                        <a href="#" class="btn btn-primary">Volver</a>
-                    </p>
-                    <p style="color: #fff;">&copy; 2024 UMD Tools Solutions &middot; Todos lo derechos reservados</p>
-                </div>
-            </div>
-        </footer>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>  
-        <script type="module" src="../js/script.js"></script>
-        <script type="module" src="../js/layouts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="../js/register.js"></script>
     </body>
 </html>
