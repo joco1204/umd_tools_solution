@@ -8,9 +8,15 @@ const loginForm = document.getElementById('loginForm');
         formData.append('password', document.getElementById('contrasena').value);
 
         try {
-            const response = await axios.get('https://api-umd-tools.onrender.com/user/login', {
-                params: formData
-            });
+            const response = await axios.get(
+                'https://api-umd-tools.onrender.com/user/login',
+                formData,
+                {
+                    headers: {
+                        'Content-Type': 'multipart/form-data'
+                    }
+                }
+            );
 
             if (response.data === true) {
                 window.location.href = '../pages/home/index.html';
